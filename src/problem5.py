@@ -2,9 +2,9 @@
 Final exam, problem 2.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Joshua Bressman.  May 2018.
 
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import time
 import testing_helper
@@ -189,6 +189,14 @@ def run_test_problem5():
     
     
 def problem5(x):
+    while True:
+        if is_prime(x) == True and is_prime(sum_of_digits(x)) == True:
+            break
+        x = x+1
+    return x
+
+
+
     """
     What comes in:  An integer  x  that is at least 2.
     What goes out:
