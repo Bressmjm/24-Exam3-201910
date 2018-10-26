@@ -8,6 +8,7 @@ Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
 
 import time
 import testing_helper
+import math
 
 
 def main():
@@ -73,6 +74,14 @@ def run_test_problem2():
     
     
 def problem2(sequence):
+    largestnum = sequence[0]
+    index = 0
+    for k in range(len(sequence)):
+        if math.sqrt(largestnum ** 2) < math.sqrt((sequence[k]) ** 2):
+            largestnum = sequence[k]
+            index = k
+    return index
+
     """
     What comes in:
       -- An non-empty sequence of integers with no duplicates.
